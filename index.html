@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
+    <!-- Roboto Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.css" rel="stylesheet" />
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
+   
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .card {
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            box-shadow: 5px 6px 6px 2px #e9ecef;
+            transform: scale(1.1);
+        }
+
+        .main-timeline {
+            position: relative;
+        }
+
+        /* The actual timeline (the vertical ruler) */
+        .main-timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #939597;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        /* Container around content */
+        .timeline {
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        /* The circles on the timeline */
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -13px;
+            background-color: #939597;
+            border: 5px solid #F5DF4D;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* Place the container to the left */
+        .left {
+            padding: 0px 40px 20px 0px;
+            left: 0;
+        }
+
+        /* Place the container to the right */
+        .right {
+            padding: 0px 0px 20px 40px;
+            left: 50%;
+        }
+
+        /* Add arrows to the left container (pointing right) */
+        .left::before {
+            content: " ";
+            position: absolute;
+            top: 18px;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+
+        /* Add arrows to the right container (pointing left) */
+        .right::before {
+            content: " ";
+            position: absolute;
+            top: 18px;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        /* Fix the circle for containers on the right side */
+        .right::after {
+            left: -12px;
+        }
+
+        /* Media queries - Responsive timeline on screens less than 600px wide */
+        @media screen and (max-width: 600px) {
+
+            /* Place the timelime to the left */
+            .main-timeline::after {
+                left: 31px;
+            }
+
+            /* Full-width containers */
+            .timeline {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            /* Make sure that all arrows are pointing leftwards */
+            .timeline::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+
+            /* Make sure all circles are at the same spot */
+            .left::after,
+            .right::after {
+                left: 18px;
+            }
+
+            .left::before {
+                right: auto;
+            }
+
+            /* Make all right containers behave like the left ones */
+            .right {
+                left: 0%;
+            }
+        }
+    </style>
+	<title> Well-Come Guys</title>
+</head>
+<body oncontextmenu="return false" >
+	
+	<!-- Naval Bar -->
+	<header>
+        <a href="/" class="logo"><img src="./assets/images/ap.jpg" style="height: 30px;width:30px"> Ashu</a>
+
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#work">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+</header>
+
+<!-- hero section starts -->
+<section class="home" id="home">
+    <div id="particles-js"></div>
+
+    <div class="content">
+    <h2>Hi There,<br/> I'm Ashutosh <span>Phanse</span></h2>
+    <p>i am into <span class="typing-text"></span></p>
+    <a href="#about" class="btn"><span>About Me</span>
+      <i class="fas fa-arrow-circle-down"></i>
+    </a>
+    <div class="socials">
+        <ul class="social-icons">
+          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/ashutosh-phanse-a6545a253" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
+          <li><a class="github" aria-label="GitHub" href="https://github.com/ASHUTOSHPHANSE" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a class="twitter" aria-label="Twitter" href="https://twitter.com/ashuphanse0103" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          <li><a class="telegram" aria-label="Telegram" href="https://t.me/ashuphanse" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
+          <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/ashu_phanse"><i class="fab fa-instagram" target="_blank"></i></a></li>
+        </ul>
+      </div>
+    </div>
+<div class="image">
+    <img draggable="false" class="tilt" src="./assets/images/hero.png" alt="">
+</div>
+</section>
+<!-- hero section ends -->
+
+<!-- about section starts -->
+<section class="about" id="about">
+    <h2 class="heading"><i class="fas fa-user-alt"></i> LET ME <span>INTRODUCE MYSELF</span></h2>
+    
+    <div class="row">
+
+    <div class="image">
+        <img draggable="false" class="tilt" src="./assets/images/profile2.jpg" alt="">
+    </div>
+    <div class="content">
+        <h3>I'm Ashutosh</h3>
+        <span class="tag">Full Stack Developer</span>
+        
+        <p>I am an Information Technology UG from SPPU in Pune, India
+          I am very passionate about improving my coding skills & developing websites and Model Training .
+          I build Websites. Worked with many technologies and used them.
+          Rather than focusing on theoretical things practically implemented them in the code ,
+          Good Experience in Machine Learning , visualization.
+          Working for myself to improve my skills. 
+           </p>
+        
+        <div class="box-container">
+            <!-- <div class="box">
+              <p><span> age: </span> 20</p>
+              <p><span> phone : </span> +91 XXX-XXX-XXXX</p>
+            </div> -->
+            <div class="box">
+              <p><span> email 1: </span> ashuphanse07@gmail.com</p>
+              <p><span> email 2: </span> ashutosh.phanse@mitaoe.ac.in</p>
+              <p><span> place : </span> Pune, India - 412105</p>
+            </div>
+        </div>
+        
+        <div class="resumebtn">
+            <a href="https://drive.google.com/file/d/1xB4rWc-UfZDkg2g4jB2YSaTreW8--lYI/view?usp=sharing" target="_blank" class="btn"><span>Resume</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+
+    </div>
+    </div>
+</section>
+<!-- about section ends -->
+
+<section class="skills" id="skills">
+
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
+
+    
+        <div class="section">
+           
+            <div class="row">
+                
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-3">
+                    <div class="card h-100">
+                        <div class="p-4 text-center">
+                            <img class="w-100" src="https://cdn-icons-png.flaticon.com/512/174/174854.png" />
+                            <h5>HTML</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-3">
+                    <div class="card h-100">
+                        <div class="p-4 text-center">
+                            <img class="w-100" src="https://cdn-icons-png.flaticon.com/512/732/732190.png" />
+                            <h5>CSS</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-3">
+                    <div class="card h-100">
+                        <div class="p-4 text-center">
+                            <img class="w-100" src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" />
+                            <h5>JavaScript</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-3">
+                    <div class="card h-100">
+                        <div class="p-4 text-center">
+                            <img class="w-100" src="https://cdn-icons-png.flaticon.com/512/919/919830.png" />
+                            <h5>PHP</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-3">
+                    <div class="card h-100">
+                        <div class="p-4 text-center">
+                            <img class="w-100" src="https://cdn-icons-png.flaticon.com/512/2772/2772128.png" />
+                            <h5>SQL</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-3">
+                    <div class="card h-100">
+                        <div class="p-4 text-center">
+                            <img class="w-100" src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" />
+                            <h5>Python</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-3">
+                    <div class="card h-100">
+                        <div class="p-4 text-center">
+                            <img class="w-100" src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" />
+                            <h5>Bootstrap</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-3">
+                    <div class="card h-100">
+                        <div class="p-4 text-center">
+                            <img class="w-100" src="https://cdn-icons-png.flaticon.com/512/919/919851.png" />
+                            <h5>React</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-3">
+                    <div class="card h-100">
+                        <div class="p-4 text-center">
+                            <img class="w-100"
+                                src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/344/external-mongodb-a-cross-platform-document-oriented-database-program-logo-shadow-tal-revivo.png" />
+                            <h5>MongoDB</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-3">
+                    <div class="card h-100">
+                        <div class="p-4 text-center">
+                            <img class="w-100" src="https://img.icons8.com/fluency/344/node-js.png" />
+                            <h5>Node JS</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+            
+                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-3">
+                    <div class="card h-100">
+                        <div class="p-4 text-center">
+                            <img class="w-100"src="https://img.freepik.com/premium-vector/data-visualization-flat-vector-icon_9206-186.jpg?w=2000" />
+
+                            <h5>Visualization</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2 py-3">
+                    <div class="card h-100">
+                        <div class="p-4 text-center">
+                            <img class="w-100" 
+                            src="data:image/png;base64,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" />
+                            <h5>Model Training</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</section>
+
+
+
+
+<!-- education section starts -->
+<section class="education" id="education">
+
+    <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
+  
+    <div class="container py-5">
+        <div class="main-timeline" >
+            <div class="timeline left" >
+                <div class="card">
+                    <div class="card-body p-4" >
+                        <h3>2018</h3>
+                        <p class="mb-0">Joy Children's Academy Wai</p>
+                        <p>CLASS 10th : State Board of Maharashtra</p>
+                        <h4>Completed with 88.60 % </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline right">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <h3>2020</h3>
+                        <p class="mb-0">Kalasagar Academy Wai</p>
+                        <p>CLASS 12th : State Board of Maharashtra</p>
+                        <h4>Completed | 76.40 % </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline left">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <h3>2021</h3>
+                        <p class="mb-0">MIT Academy Of Engineering ,Pune </p>
+                        <h4> INFORMATION TECHNOLOGY</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline right">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <h3>Present</h3>
+                        <p class="mb-0">Pursuing  TY BTECH At MIT Academy Of Engineering ,Pune  </p>
+                        <h4>CGPA | 8.46 </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+  
+
+  </section>
+  <!-- education section ends -->
+
+  <!-- Exprience project section starts -->
+<section class="work" id="work">
+
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+  
+    <div class="box-container">
+  
+      
+  
+  </div>
+  
+  <div class="viewall">
+    <a href="./projects" class="btn"><span>View All</span>
+      <i class="fas fa-arrow-right"></i>
+  </a>
+  </div>
+  
+  </section>
+  <!-- Expreience  project section ends -->
+
+
+<!-- Contact -->
+<section class="contact" id="contact" >
+  
+    <br><br>
+    <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+  
+    <div class="contact-container" class="contcolor">
+      
+        <br><br>
+      <div class="container">
+        <div class="row contact">
+          <!-- Contact Infos Starts -->
+          <div class="col-12 col-md-4 col-xl-4 leftside">
+            <ul class="custom-list">
+              <li>
+                <h6 class="font-weight-600">
+                  <span class="contact-title">Phone</span><img src="./assets/images/whatapp.jpg" style="height:35px; width:35px"><span
+                    class="contact-content" style="margin-left:15px; margin-top:15px">+91 9404484028</span>
+                </h6>
+              </li>
+              <li>
+                <h6 class="font-weight-600">
+                  <span class="contact-title">email</span><img src="./assets/images/gmail.png" style="height:25px; width:25px"><span
+                    class="contact-content" style="margin-left:10px; margin-top:15px">ashuphanse007@gmail.com</span>
+                </h6>
+              </li>
+              <li>
+                <h6 class="font-weight-600">
+                  <span class="contact-title">instagram</span><img src="./assets/images/Instagram.png" style="height:25px; width:25px"><span
+                    class="contact-content" style="margin-left:10px; margin-top:15px">ashu_phanse</span>
+                </h6>
+              </li>
+              
+            </ul>
+
+            <!-- Social Media Profiles Starts -->
+
+            <div class="social">
+              <h6 class="font-weight-600 uppercase">Social Profiles</h6>
+              <ul class="list-inline social social-intro text-center p-none">
+                <li class="facebook">
+                    <a title="facebook" href="https://www.facebook.com/ashutosh.phanse.5"><img src="./assets/images/fb.png" style="height:25px; width:30px"></a>
+                  </li>
+                <li class="youtube">
+                  <a title="Youtube" href="https://youtube.com/@ashuphanse7697"><img src="./assets/images/youtub.png" style="height:25px; width:30px"></a>
+                </li>
+                <li class="twitter">
+                    <a title="twitter" href="https://twitter.com/ashuphanse0103"><img src="./assets/images/twitter.png" style="height:25px; width:30px"></a>
+                  </li>
+              </ul>
+            </div>
+            <!-- Social Media Profiles Ends -->
+          </div>
+          <!-- Contact Infos Ends -->
+          <!-- Contact Form Starts -->
+          <div class="col-12 col-md-8 col-xl-8 rightside">
+            <p>
+              If you have any suggestion, project or even you want to say
+              Hello.. please fill out the form below and I will reply you
+              shortly.
+            </p>
+            <form class="contactform" method="post"
+              action="http://slimhamdi.net/istanbul/demos/php/process-form.php">
+              <div class="row">
+                <!-- Name Field Starts -->
+                <div class="form-group col-xl-6">
+                  <i class="fa fa-user prefix" style="height:25px; width:25px  ;margin-top:11px ; border:0px ;" ></i>
+                  <input id="name" name="name" type="text" class="form-control" style="margin-left:9px" placeholder="YOUR NAME" required />
+                </div>
+                <!-- Name Field Ends -->
+                <!-- Email Field Starts -->
+                <div class="form-group col-xl-6">
+                  <i class="fa fa-envelope prefix" style="height:25px; width:25px  ;margin-top:11px ; border:0px ;"></i>
+                  <input id="email" type="email" name="email" style="margin-left:9px" class="form-control" placeholder="YOUR EMAIL"
+                    required />
+                </div>
+                <!-- Email Field Ends -->
+                <!-- Comment Textarea Starts -->
+                <div class="form-group col-xl-12">
+                  <i class="fa fa-comments prefix" style="height:25px; width:25px  ;margin-top:11px ; border:0px ;"  ></i>
+                  <textarea id="comment" name="comment" style="margin-left:9px" class="form-control" placeholder="YOUR MESSAGE"
+                    required></textarea>
+                </div>
+                <!-- Comment Textarea Ends -->
+              </div>
+              <!-- Submit Form Button Starts -->
+              <div class="submit-form">
+                <button class="btn button-animated" type="submit" name="send" style="background-color:aqua  ; height: 35px ; width :150px ; font-size:13px;  ">
+                  <span><i class="fa fa-send"></i> Send Message</span>
+                </button>
+              </div>
+              <!-- Submit Form Button Ends -->
+              <div class="form-message">
+                <span class="
+                      output_message
+                      text-center
+                      font-weight-600
+                      uppercase
+                    "></span>
+              </div>
+            </form>
+          </div>
+          <!-- Contact Form Ends -->
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- CONTACT END  -->
+
+<!-- footer section starts -->
+<section class="footer">
+
+    <div class="box-container">
+  
+        <div class="box">
+            <h3>Ashutosh's Portfolio</h3>
+            <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Keep Rising 🚀.  </p>
+        </div>
+  
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+            <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
+            <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
+            <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
+            <a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
+            <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
+        </div>
+  
+        <div class="box">
+            <h3>contact info</h3>
+            <p> <i class="fas fa-phone"></i>+91 940-448-4028</p>
+            <p> <i class="fas fa-envelope"></i>ashuphanse007@gmail.com</p>
+            <p> <i class="fas fa-map-marked-alt"></i>MITAOE PUNE , 412105</p>
+            <div class="share">
+  
+            <a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/ashutosh-phanse-a6545a253" target="_blank"><i class="fab fa-linkedin"></i></a> 
+            <a class="github" aria-label="GitHub" href="https://github.com/ASHUTOSHPHANSE" target="_blank"><i class="fab fa-github"></i></a>
+            <a class="twitter" aria-label="Twitter" href="https://twitter.com/ashuphanse0103" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a class="telegram" aria-label="Telegram" href="https://t.me/ashuphanse" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+            <a class="instagram" aria-label="Instagram" href="https://www.instagram.com/ashu_phanse"><i class="fab fa-instagram" target="_blank"></i></a>
+        </div>
+        </div>
+    </div>
+  
+    <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/ashutosh-phanse-a6545a253"> ashutosh phanse</a></h1>
+  
+  </section>
+  <!-- footer section ends -->
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+<!-- jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- typed.js cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- particle.js links -->
+<script src="./assets/js/particles.min.js"></script>
+<script src="./assets/js/app.js"></script>
+
+<!-- vanilla tilt.js links -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- scroll reveal anim -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+    <script src="./assets/css/bootstrap.min.css"></script>
+    <script src="./assets/js/custom.js"></script>
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+
+<script src="./assets/js/script.js"></script>
+
+</body>
+</html>

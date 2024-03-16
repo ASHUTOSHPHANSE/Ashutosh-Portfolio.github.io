@@ -1,21 +1,32 @@
 [
   
   {
+    "name": "Quizmo- the smart quiz portal",
+    "desc": "Developed a quiz portal that produces a detailed report assessment of individual student.",
+    "image": "matrimonialsite",
+    "category": "mern",
+    "links": {
+      "view": "https://quizmo.onrender.com/api/main",
+      "code": "https://github.com/ASHUTOSHPHANSE/"
+    }
+  },
+
+  {
     "name": "Matrimonial Site ",
     "desc": "Full-Stack Instagram clone built using MERN stack and realtime chat with the help of socket.iO",
-    "image": "matrimonialsite",
+    "image": "assets/images/projects/matrimonialsite.png",
     "category": "mern",
     "links": {
       "view": "#",
       "code": "https://github.com/ASHUTOSHPHANSE/Matrimonysite_mitaoe"
     }
-  },
+  },  
   
  
   {
     "name": "McqBased Exam Portal Website",
     "desc": "This website is specially build to showcase all major javaScript projects. All my Html , css , javaScripy based projects are in it.",
-    "image": "examportal",
+    "image": "/assets/images/projects/examportal.png",
     "category": "basicweb",
     "links": {
       "view": "#",
@@ -27,7 +38,7 @@
   {
     "name": "Foodicious",
     "desc": "Basic food website landing page built using HTML, CSS and JavaScript.",
-    "image": "foodicious",
+    "image": "/assets/images/projects/foodicious.png",
     "category": "basicweb",
     "links": {
       "view": "#",
@@ -37,7 +48,7 @@
   {
     "name": "CHAT BOT With Parental Control",
     "desc": "Computer Networking Project using UDP, where Third can be parent to security Person . ",
-    "image": "C:/Users/ashup/Downloads/TIMEPASS/PORTFOLIO/assets/images/projects/chatbot.png",
+    "image": "/assets/images/projects/chatbot.png",
     "category": "c",
     "links": {
       "view": "#",
@@ -49,7 +60,7 @@
   {
     "name": "DOTNET_MARITMONY",
     "desc": "This website is specially build to showcase all major concept use in ASPX Dot Net .",
-    "image": "aspxmartrimony.png",
+    "image": "assets/images/projects/aspxmartrimony.png",
     "category": "dotnet",
     "links": {
       "view": "#",
@@ -61,7 +72,7 @@
   {
     "name": "E-Commerce",
     "desc": "Basic E-commerce website landing page built using PHP, CSS and JavaScript.DBMS Project for Database Purpose {SQL DATABASE}",
-    "image": "e-commerce",
+    "image": "/assets/images/projects/e-commerce.png",
     "category": "php",
     "links": {
       "view": "#",

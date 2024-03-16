@@ -3,7 +3,7 @@
   {
     "name": "Quizmo- the smart quiz portal",
     "desc": "Developed a quiz portal that produces a detailed report assessment of individual student.",
-    "image": "matrimonialsite",
+    "image": "matrimonialsite.png",
     "category": "mern",
     "links": {
       "view": "https://quizmo.onrender.com/api/main",

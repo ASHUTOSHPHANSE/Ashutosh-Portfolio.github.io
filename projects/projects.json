@@ -66,18 +66,6 @@
       "view": "#",
       "code": "https://github.com/ASHUTOSHPHANSE/USING_DOTNET_MARITMONY_"
     }
-  },
- 
-
-  {
-    "name": "E-Commerce",
-    "desc": "Basic E-commerce website landing page built using PHP, CSS and JavaScript.DBMS Project for Database Purpose {SQL DATABASE}",
-    "image": "/assets/images/projects/e-commerce.png",
-    "category": "php",
-    "links": {
-      "view": "#",
-      "code": "https://github.com/ASHUTOSHPHANSE/E-Commerce_with_SQL"
-    }
   }
 
 ]
